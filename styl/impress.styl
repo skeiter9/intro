@@ -1,0 +1,102 @@
+@import "__constants/variables.styl"
+@import "__constants/mixins.styl"
+
+.step
+	&.presentation,&.taller
+		min-height 40rem
+		border-radius 2rem 5rem 2rem 5rem
+	&.taller
+		background-color COLOR_RED
+	&.presentation
+		background-color COLOR_THEME
+		& .tittle 
+			background-color COLOR_SKY_BLUE
+			padding 1rem 0
+			margin-top 2rem
+			border-radius .2rem 
+			&:before,&:after
+				content ""
+				position absolute
+			&:before
+				border-color: darken(COLOR_SKY_BLUE,10%) rgba(0, 0, 0, 0) darken(COLOR_SKY_BLUE,10%) darken(COLOR_SKY_BLUE,10%)  
+				border-style: solid
+				border-width: 2rem
+				top 1rem
+				right -3rem
+				z-index -1
+			&:after
+				border-color: darken(COLOR_SKY_BLUE,10%)   darken(COLOR_SKY_BLUE,10%)   darken(COLOR_SKY_BLUE,10%) rgba(0, 0, 0, 0) 
+				border-style: solid
+				border-width: 2rem
+				top 1rem
+				left -3rem
+				z-index -1
+		& .subtittle
+			transform rotate(15deg)
+			margin-top 2rem
+			font-weight bold
+		& footer
+			background-color COLOR_DARK
+			position: absolute
+			bottom 0
+			left 0
+			border-radius 0 0 2rem 5rem
+			padding BASE_SPACE
+			&:before
+				content ""
+				position absolute
+				border-color: rgba(0, 0, 0, 0) COLOR_GREEN  COLOR_GREEN  rgba(0, 0, 0, 0)
+				border-style: solid
+				border-width: 8rem
+				margin-top -15rem
+				top 0
+				right 0
+				z-index: -1
+
+.cloud
+	position absolute
+	width 300px
+	height 200px
+	&.c1
+		left 2rem
+		top 2rem
+		background url('../../impress.js/images/figures/clouds-1.png') no-repeat top
+	&.c2
+		left 15rem
+		top 5rem
+		background url('../../impress.js/images/figures/clouds-2.png') no-repeat top
+	&.c3
+		left 30rem
+		background url('../../impress.js/images/figures/clouds-3.png') no-repeat top
+
+.html5-icon
+	font-size 15rem
+	color COLOR_HTML5
+	&:after
+		content ""
+		position absolute
+		background-color COLOR_WHITE
+		width 8rem
+		height 10rem
+		z-index: -1
+		top 3rem
+		left 3rem
+.marco
+	overflow hidden
+	position relative
+	border 5px solid COLOR_DARK
+	background: #0fb4e7; /* Old browsers */
+	background: -moz-linear-gradient(top, #0fb4e7 0%, #56d4e2 33%, #56d4e2 50%, #45b78d 57%, #68bc47 65%, #7caf41 74%, #7caf41 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0fb4e7), color-stop(33%,#56d4e2), color-stop(50%,#56d4e2), color-stop(57%,#45b78d), color-stop(65%,#68bc47), color-stop(74%,#7caf41), color-stop(100%,#7caf41)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #0fb4e7 0%,#56d4e2 33%,#56d4e2 50%,#45b78d 57%,#68bc47 65%,#7caf41 74%,#7caf41 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #0fb4e7 0%,#56d4e2 33%,#56d4e2 50%,#45b78d 57%,#68bc47 65%,#7caf41 74%,#7caf41 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #0fb4e7 0%,#56d4e2 33%,#56d4e2 50%,#45b78d 57%,#68bc47 65%,#7caf41 74%,#7caf41 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #0fb4e7 0%,#56d4e2 33%,#56d4e2 50%,#45b78d 57%,#68bc47 65%,#7caf41 74%,#7caf41 100%); /* W3C */
+	min-height 35rem
+.floor
+	position absolute
+	bottom 0
+	left 0
+	width 100%
+	height 111px
+	background url('../../impress.js/images/figures/floor.png') repeat-x bottom
